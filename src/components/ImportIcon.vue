@@ -56,11 +56,12 @@ function generateIReadConfig() {
     const iReadTemplate = {
         _ClassName: "JxdAdvCustomTTS",
         _TTSConfigID: generateRandomString(),
+        maxWordCount: "200",
+        ttsConfigGroup: "☁️",
         ttsHandles: [
             {
                 processType: 1,
                 maxPageCount: 1,
-                maxWordCount: "200",
                 nextPageForGetMedthod: 1,
                 forGetMethod: 0,
                 requestByWebView: 0,
@@ -99,7 +100,7 @@ function generateIReadConfig() {
                 },
             },
         ],
-        _TTSName: originConfig.data[1],
+        _TTSName: "☁️ - 原神 " +originConfig.data[1],
     };
     return iReadTemplate;
 }
