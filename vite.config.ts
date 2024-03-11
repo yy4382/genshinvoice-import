@@ -19,7 +19,7 @@ export default defineConfig({
       },
       build: {
         externalGlobals: {
-          vue: cdn.staticfile('Vue', 'dist/vue.global.prod.js'),
+          vue: cdn.staticfile('Vue', 'vue.global.prod.min.js'),
         },
       },
     }),
