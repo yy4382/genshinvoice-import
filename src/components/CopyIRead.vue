@@ -1,54 +1,8 @@
 <script setup lang="ts">
-function generateRandomString() {
-    const characters =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let randomString = "";
-    for (let i = 0; i < 32; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        randomString += characters[randomIndex];
-    }
-    return randomString;
-}
+import generateRandomString from "../utils/generateRandomString";
+import getConfig from "../utils/getConfig";
+import copy2Clipboard from "../utils/copy2Clipboard";
 
-function getConfig() {
-    const selectors = [
-        null,
-        "#component-5 > label > div > div.wrap-inner > div > input",
-        "#range_id_0",
-        "#range_id_1",
-        "#range_id_2",
-        "#range_id_3",
-        "#component-14 > label > div > div.wrap-inner > div > input",
-        "#component-29 > label > input",
-        "#range_id_6",
-        "#range_id_5",
-        null,
-        "#component-8 > label > textarea",
-        "#component-22 > label > textarea",
-        "#range_id_4",
-    ];
-    let data = [];
-    for (const selector of selectors) {
-        if (selector) {
-            const value = (document.querySelector(selector) as HTMLInputElement)
-                .value;
-            data.push(value);
-        } else {
-            data.push(null);
-        }
-    }
-    for (let i of [2, 3, 4, 5, 8, 9, 13]) {
-        data[i] = parseFloat(data[i] as string);
-    }
-    data[7] = true;
-
-    return {
-        data: data,
-        event_data: null,
-        fn_index: 0,
-        session_hash: null,
-    };
-}
 function generateIReadConfig() {
     const originConfig = getConfig();
     originConfig.data[0] = "%@";
@@ -105,16 +59,7 @@ function generateIReadConfig() {
     };
     return iReadTemplate;
 }
-function copy2Clipboard(text: string) {
-    navigator.clipboard
-        .writeText(text)
-        .then(() => {
-            alert("已复制到剪贴板");
-        })
-        .catch((error) => {
-            console.error("复制到剪贴板失败", error);
-        });
-}
+
 function copyIRead() {
     const iReadConfig = generateIReadConfig();
     copy2Clipboard(JSON.stringify(iReadConfig));
