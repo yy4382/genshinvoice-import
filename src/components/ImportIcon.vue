@@ -53,6 +53,7 @@ function generateIReadConfig() {
     const originConfig = getConfig();
     originConfig.data[0] = "%@";
     const body = JSON.stringify(originConfig);
+    const process = `@dyn:\np=def:\"|'|\\n @=>;\ntxt=keyword.jxd_executeRegexRules:p;\nformat('${body}',txt)`;
     const iReadTemplate = {
         _ClassName: "JxdAdvCustomTTS",
         _TTSConfigID: generateRandomString(),
@@ -66,7 +67,6 @@ function generateIReadConfig() {
                 forGetMethod: 0,
                 requestByWebView: 0,
                 nextPageParams: {},
-                paramsEx: "@json:data",
                 url: "https://v2.genshinvoice.top/run/predict",
                 parser: {
                     audioUrl:
@@ -77,9 +77,10 @@ function generateIReadConfig() {
                     headers: {
                         "Content-Type": "application/json",
                     },
+                    customFormatParams: "params[data]",
                 },
                 params: {
-                    data: body,
+                    data: process,
                 },
             },
             {
@@ -100,7 +101,7 @@ function generateIReadConfig() {
                 },
             },
         ],
-        _TTSName: "☁️ - 原神 " +originConfig.data[1],
+        _TTSName: "☁️ - MHY " + originConfig.data[1],
     };
     return iReadTemplate;
 }
