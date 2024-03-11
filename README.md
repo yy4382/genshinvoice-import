@@ -1,18 +1,10 @@
-# Vue 3 + TypeScript + Vite
+# Genshinvoice import
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+将 <https://v2.genshinvoice.top/> 中的原神语音导入到小说软件中用于听书。目前完成了爱阅记的配置生成复制。
 
-## Recommended IDE Setup
+## 使用
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support For `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. 安装。在 Greasy Fork 中安装脚本。查看 [原神语音听书导入](https://greasyfork.org/zh-CN/scripts/489531-%E5%8E%9F%E7%A5%9E%E8%AF%AD%E9%9F%B3%E5%90%AC%E4%B9%A6%E5%AF%BC%E5%85%A5)
+2. 打开 <https://v2.genshinvoice.top/>，选择好你喜欢的语音和参数。
+3. 点击页面底部的“复制爱阅记配置”按钮，你在网页上所选的选项会以爱阅记听书配置的形式复制到剪贴板。
+4. 打开爱阅记，在“设置”-“在线语音库管理”-右上角“菜单”-“JSON输入”中粘贴刚才复制的内容，点击“导入”即可。
