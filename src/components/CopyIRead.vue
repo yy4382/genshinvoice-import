@@ -68,6 +68,6 @@ function copyIRead() {
 
 <template>
     <div>
-        <button @click="copyIRead">复制爱阅记配置</button>
+        <button @click="copyIRead" class="v-button">复制爱阅记配置</button>
     </div>
 </template>

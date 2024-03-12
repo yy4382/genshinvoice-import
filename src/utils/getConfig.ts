@@ -23,6 +23,10 @@ export default function () {
                 : null
         );
     }
+    if (!data[1]) {
+        alert("请选择角色，或者等待页面加载完全后再点击按钮");
+        throw new Error("not getting data from page");
+    }
     for (let i of [2, 3, 4, 5, 8, 9, 13]) {
         data[i] = parseFloat(data[i] as string);
     }
