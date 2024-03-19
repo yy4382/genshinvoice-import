@@ -21,10 +21,10 @@ function generateIReadConfig() {
                 forGetMethod: 0,
                 requestByWebView: 0,
                 nextPageParams: {},
-                url: "https://v2.genshinvoice.top/run/predict",
+                url: "https://bv2.firefly.matce.cn/run/predict",
                 parser: {
                     audioUrl:
-                        '@str:"https://v2.genshinvoice.top/file={{@json:data[1].name}}"',
+                        '@str:"https://bv2.firefly.matce.cn/file={{@json:data[1].name}}"',
                 },
                 httpConfigs: {
                     useCookies: 1,
