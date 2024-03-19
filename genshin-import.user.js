@@ -1,17 +1,17 @@
 // ==UserScript==
 // @name         原神语音听书导入
 // @namespace    https://yfi.moe
-// @version      0.1.1
+// @version      0.1.2
 // @author       Yunfi <i@yfi.moe>
-// @description  从 https://v2.genshinvoice.top 导入原神语音用于听书
+// @description  从 https://bv2.firefly.matce.cn 导入原神语音用于听书
 // @license      MIT
-// @icon         https://v2.genshinvoice.top/favicon.ico
-// @match        https://v2.genshinvoice.top/*
+// @icon         https://bv2.firefly.matce.cn/favicon.ico
+// @match        https://bv2.firefly.matce.cn/*
 // @require      https://cdn.staticfile.org/vue/3.4.21/vue.global.prod.min.js
 // @grant        GM_addStyle
 // ==/UserScript==
 
-(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const o=document.createElement("style");o.textContent=e,document.head.append(o)})(" :root{font-family:Inter,Avenir,Helvetica,Arial,sans-serif;font-size:16px;line-height:24px;font-weight:400;color-scheme:light dark;color:#202020de;background-color:#fff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%}.v-a{font-weight:500;color:#646cff;text-decoration:inherit}.v-a:hover{color:#535bf2}h1{font-size:3.2em;line-height:1.1}.v-button{border-radius:8px;border:1px solid transparent;padding:.6em 1.2em;font-size:1em;font-weight:500;font-family:inherit;background-color:#f9f9f9;cursor:pointer;transition:border-color .25s}.v-button:hover{border-color:#646cff}.card{padding:2em}@media (prefers-color-scheme: dark){:root{color:#ffffffde;background-color:#0b0f19}.v-a:hover{color:#747bff}.v-button{background-color:#343434}}#iread-oc-modal[data-v-63501ad3]{position:fixed;margin:auto;border:none;border-radius:1rem;box-shadow:0 0 10px #0000001a;padding:3rem}.close-dialog[data-v-63501ad3]{position:absolute;top:.5rem;right:.5rem}.inner-modal[data-v-63501ad3]{display:flex;flex-direction:column;gap:1rem;background-color:#fff}.btn-a[data-v-63501ad3]{text-decoration:none;color:inherit;text-align:center}.show-btn[data-v-febeb034]{position:fixed;bottom:1rem;right:1rem;border-radius:9999px}.btn-card[data-v-febeb034]{position:fixed;bottom:4rem;right:1rem;display:flex;flex-direction:column;gap:1rem;padding:1rem;background-color:#fff;border-radius:1rem;box-shadow:0 0 10px #0000001a}.slide-enter-active[data-v-febeb034],.slide-leave-active[data-v-febeb034]{transition:all .3s ease-out}.slide-enter-from[data-v-febeb034],.slide-leave-to[data-v-febeb034]{transform:translate(100%);opacity:0} ");
+(o=>{if(typeof GM_addStyle=="function"){GM_addStyle(o);return}const e=document.createElement("style");e.textContent=o,document.head.append(e)})(" :root{font-family:Inter,Avenir,Helvetica,Arial,sans-serif;font-size:16px;line-height:24px;font-weight:400;color-scheme:light dark;color:#202020de;background-color:#fff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%}.v-a{font-weight:500;color:#646cff;text-decoration:inherit}.v-a:hover{color:#535bf2}h1{font-size:3.2em;line-height:1.1}.v-button{border-radius:8px;border:1px solid transparent;padding:.6em 1.2em;font-size:1em;font-weight:500;font-family:inherit;background-color:#f9f9f9;cursor:pointer;transition:border-color .25s}.v-button:hover{border-color:#646cff}.card{padding:2em}@media (prefers-color-scheme: dark){:root{color:#ffffffde;background-color:#0b0f19}.v-a:hover{color:#747bff}.v-button{background-color:#343434}}#iread-oc-modal[data-v-63501ad3]{position:fixed;margin:auto;border:none;border-radius:1rem;box-shadow:0 0 10px #0000001a;padding:3rem}.close-dialog[data-v-63501ad3]{position:absolute;top:.5rem;right:.5rem}.inner-modal[data-v-63501ad3]{display:flex;flex-direction:column;gap:1rem;background-color:#fff}.btn-a[data-v-63501ad3]{text-decoration:none;color:inherit;text-align:center}.show-btn[data-v-43b38518]{position:fixed;bottom:1rem;right:1rem;border-radius:9999px}.btn-card[data-v-43b38518]{position:fixed;bottom:4rem;right:1rem;display:flex;flex-direction:column;gap:1rem;padding:1rem;background-color:#fff;border-radius:1rem;box-shadow:0 0 10px #0000001a}@media (prefers-color-scheme: dark){.btn-card[data-v-43b38518]{background-color:#222}}.slide-enter-active[data-v-43b38518],.slide-leave-active[data-v-43b38518]{transition:all .15s ease-in-out}.slide-enter-from[data-v-43b38518],.slide-leave-to[data-v-43b38518]{transform:translate(100%);opacity:0} ");
 
 (function (vue) {
   'use strict';
@@ -94,9 +94,9 @@ format('${body}',txt)`;
               forGetMethod: 0,
               requestByWebView: 0,
               nextPageParams: {},
-              url: "https://v2.genshinvoice.top/run/predict",
+              url: "https://bv2.firefly.matce.cn/run/predict",
               parser: {
-                audioUrl: '@str:"https://v2.genshinvoice.top/file={{@json:data[1].name}}"'
+                audioUrl: '@str:"https://bv2.firefly.matce.cn/file={{@json:data[1].name}}"'
               },
               httpConfigs: {
                 useCookies: 1,
@@ -271,7 +271,7 @@ format('${body}',txt)`;
       };
     }
   });
-  const BtnCard = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-febeb034"]]);
+  const BtnCard = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-43b38518"]]);
   const _sfc_main = /* @__PURE__ */ vue.defineComponent({
     __name: "App",
     setup(__props) {
