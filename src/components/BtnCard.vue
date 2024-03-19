@@ -32,9 +32,14 @@ const showCard = ref(false);
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+@media (prefers-color-scheme: dark) {
+    .btn-card {
+        background-color: #222;
+    }
+}
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.3s ease-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .slide-enter-from,
