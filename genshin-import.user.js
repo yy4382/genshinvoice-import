@@ -55,7 +55,7 @@
     for (let i of [2, 3, 4, 5, 8, 9, 13]) {
       data[i] = parseFloat(data[i]);
     }
-    data[7] = true;
+    data[7] = false;
     return {
       data,
       event_data: null,
