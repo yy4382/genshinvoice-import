@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         原神语音听书导入
 // @namespace    https://yfi.moe
-// @version      0.1.2
+// @version      0.1.3
 // @author       Yunfi <i@yfi.moe>
 // @description  从 https://bv2.firefly.matce.cn 导入原神语音用于听书
 // @license      MIT
