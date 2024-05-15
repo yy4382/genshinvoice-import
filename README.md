@@ -1,5 +1,8 @@
 # Genshinvoice import
 
+> [!Caution]
+> 本项目目前是失效状态。他们搞了新的模型和前端，目前来看效果比之前的好，但是推理速度还有生成的稳定性不如之前了。我再观望一段时间，如果之后他们有优化的话，说不定会更新。
+
 [![Build Release](https://github.com/yy4382/genshinvoice-import/actions/workflows/build-release.yaml/badge.svg)](https://github.com/yy4382/genshinvoice-import/actions/workflows/build-release.yaml)
 
 将 <https://bv2.firefly.matce.cn> 中的原神语音导入到小说软件中用于听书。目前完成了爱阅记的配置生成复制。
